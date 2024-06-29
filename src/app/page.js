@@ -9,8 +9,7 @@ const skills = [
   {
     id: 0,
     name: "Graphic/UI Design",
-    description:
-      "solve visual problems by simplifying people's lives by providing satisfying experiences;",
+    description: `solve visual problems by simplifying people&apos;s lives by providing satisfying experiences;`,
     tools: [
       {
         id: 0.0,
@@ -125,8 +124,7 @@ const projects = [
     image: "/images/teste3.png",
     link: "https://www.figma.com/design/47nVRt9rhKClqcfLNOBGLD/projeto-cqd?node-id=0-1&t=RvWcXu28V4nUdSpa-1",
     name: "Projeto CQD",
-    description:
-      "Class System Project, being the best planned design project I've done to date, even though it's not completely executed, I believe it's interesting to bring it, because in it I was able to demonstrate a little that I learned after a while studying graphic design;",
+    description: `Class System Project, being the best planned design project I&apos;ve done to date, even though it&apos;s not completely executed, I believe it&apos;s interesting to bring it, because in it I was able to demonstrate a little that I learned after a while studying graphic design;`,
     tags: ["Figma", "UI System"],
   },
 ];
@@ -320,8 +318,8 @@ export default function Home() {
             About
           </h1>
           <p className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-slate-400 mt-6">
-            Hello! I'm Brayan Amaral, a{" "}
-            <b>Brazilian Web Developer from Goiânia-GO</b>, passionate about
+            Hello! I a&apos;m Brayan Amaral, a
+            <b> Brazilian Web Developer from Goiânia-GO</b>, passionate about
             front-end and UI/UX design, aiming to become an exceptional Full
             Stack developer. <br />
             <br /> At <b>22, with 4 years of programming experience</b>, I am
