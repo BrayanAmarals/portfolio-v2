@@ -152,7 +152,8 @@ export default function Home() {
   const projectsRef = useRef(null);
   const [tanjiroPosition, setTanjiroPosition] = useState("up");
   const [language, setLanguage] = useState("en");
-  const [src, setSrcn] = useState(`/images/tanjiro${tanjiroPosition}.png`);
+
+  const src = `/images/tanjiro${tanjiroPosition}.png`;
 
   useEffect(() => {
     const handleScroll = () => {
