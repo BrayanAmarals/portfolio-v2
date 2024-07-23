@@ -351,7 +351,7 @@ export default function Home() {
           </li>
         </ul>
         <Image
-          src="/images/tanjiroup.png"
+          src="/tanjiroup.png"
           alt="tanjiro image"
           width={100}
           height={100}
