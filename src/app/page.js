@@ -200,7 +200,7 @@ export default function Home() {
 
   return (
     <main className="lg:flex lg:justify-between lg:gap-4 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
-      <div className="flex flex-row gap-5 fixed top-5 right-10 items-center">
+      <div className="flex flex-row gap-5 absolute top-5 right-10 items-center">
         <p>{language == "en" ? "Language: " : "Idioma: "}</p>
         <button onClick={() => changeLanguage()}>
           <Icon
@@ -356,7 +356,7 @@ export default function Home() {
           width={100}
           height={100}
           priority
-          className="absolute bottom-0 left-[50%]"
+          className="absolute bottom-0 left-[50%] max-[1024px]:hidden"
         />
       </section>
       <section className="pt-24 lg:w-1/2 lg:py-24">
