@@ -152,6 +152,7 @@ export default function Home() {
   const projectsRef = useRef(null);
   const [tanjiroPosition, setTanjiroPosition] = useState("up");
   const [language, setLanguage] = useState("en");
+  const [src, setSrcn] = useState(`/images/tanjiro${tanjiroPosition}.png`);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -351,7 +352,7 @@ export default function Home() {
           </li>
         </ul>
         <Image
-          src={`/images/tanjiroup.png`}
+          src={src}
           alt="tanjiro image"
           width={100}
           height={100}
