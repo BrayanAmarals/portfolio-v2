@@ -153,8 +153,6 @@ export default function Home() {
   const [tanjiroPosition, setTanjiroPosition] = useState("up");
   const [language, setLanguage] = useState("en");
 
-  const src = `/images/tanjiro${tanjiroPosition}.png`;
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -199,7 +197,7 @@ export default function Home() {
       setLanguage("en");
     }
   };
-  console.log(`/images/tanjiro${tanjiroPosition}.png`);
+
   return (
     <main className="lg:flex lg:justify-between lg:gap-4 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <div className="flex flex-row gap-5 absolute top-5 right-10 items-center">
@@ -353,7 +351,7 @@ export default function Home() {
           </li>
         </ul>
         <Image
-          src={src}
+          src={`/images/tanjiromid.png`}
           alt="tanjiro image"
           width={100}
           height={100}
