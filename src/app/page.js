@@ -4,6 +4,9 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 const skills = [
   {
@@ -199,7 +202,9 @@ export default function Home() {
   };
 
   return (
-    <main className="lg:flex lg:justify-between lg:gap-4 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
+    <main
+      className={`lg:flex lg:justify-between lg:gap-4 mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-20 lg:px-24 lg:py-0 ${inter.className}`}
+    >
       <div className="flex flex-row gap-5 absolute top-5 right-10 items-center">
         <p>{language == "en" ? "Language: " : "Idioma: "}</p>
         <button onClick={() => changeLanguage()}>
@@ -213,7 +218,7 @@ export default function Home() {
           />
         </button>
       </div>
-      <section className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+      <section className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 max-[600px]:mt-12">
         <div>
           <div className="flex flex-col gap-3">
             <a onClick={() => handleScrollTo(aboutRef, "about")}>
@@ -223,8 +228,8 @@ export default function Home() {
             </a>
             <h2 className="text-lg font-normal tracking-tight text-slate-200 sm:text-xl">
               {language == "en"
-                ? "Junior Frontend Engineer"
-                : "Engenheiro Frontend Junior"}
+                ? "Pleno Frontend Developer"
+                : "Desenvolvedor Frontend Pleno"}
             </h2>
             <h3 className="text-[#93A2B7] max-w-xs leading-regular mt-1">
               {language == "en"
@@ -370,56 +375,55 @@ export default function Home() {
           ref={aboutRef}
         />
         <div className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-slate-400 mt-6">
-          <h1 className="text-[#E2E8F0] text-3xl font-semibold tracking-tight">
+          <h1 className="text-[#E2E8F0] text-3xl font-semibold tracking-tight mb-8">
             {language == "en" ? "About" : "Sobre"}
           </h1>
-          <p className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-slate-400 mt-6">
-            {language == "en" ? (
-              <p>
-                Hello! I a&apos;m Brayan Amaral, a
-                <b> Brazilian Web Developer from Goiânia-GO</b>, passionate
-                about front-end and UI/UX design, aiming to become an
-                exceptional Full Stack developer. <br />
-                <br /> At <b>22, with 4 years of programming experience</b>, I
-                am dedicated to professional growth. <br />
-                <br />I have a proven ability to develop customized and scalable
-                solutions, adhering to the best web development practices. My
-                excellent collaboration and communication skills enable me to
-                work effectively in team environments. I constantly keep up with
-                the latest industry trends and technologies to deliver
-                high-quality, impactful solutions to clients. <br />
-                <br />
-                <b>I am open to new challenges and opportunities </b>to
-                contribute to innovative web development projects.
-              </p>
-            ) : (
-              <p>
-                Olá! Eu sou Brayan Amaral, um
-                <b> Desenvolvedor Web Brasileiro de Goiânia-GO</b>, apaixonado
-                por design front-end e UI/UX, com o objetivo de me tornar um
-                desenvolvedor Full Stack excepcional. <br />
-                <br /> Com <b>22 anos e 4 anos de experiência em programação</b>
-                , estou dedicado ao crescimento profissional. <br />
-                <br />
-                Tenho comprovada habilidade para desenvolver soluções
-                personalizadas e escaláveis, seguindo as melhores práticas de
-                desenvolvimento web. Minhas excelentes habilidades de
-                colaboração e comunicação me permitem trabalhar eficazmente em
-                ambientes de equipe. Estou sempre atualizado com as últimas
-                tendências e tecnologias da indústria para oferecer soluções de
-                alta qualidade e impacto aos clientes. <br />
-                <br />
-                <b>Estou aberto a novos desafios e oportunidades </b>para
-                contribuir em projetos inovadores de desenvolvimento web.
-              </p>
-            )}
-          </p>
+          {language == "en" ? (
+            <p>
+              Hello! I am Brayan Amaral, a
+              <b> Brazilian Web Developer from Goiânia-GO</b>, passionate about
+              front-end and UI/UX design, aiming to become an exceptional Full
+              Stack developer. <br />
+              <br /> At <b>22, with 4 years of programming experience</b>, I am
+              dedicated to professional growth. <br />
+              <br />I have a proven ability to develop customized and scalable
+              solutions, adhering to the best web development practices. My
+              excellent collaboration and communication skills enable me to work
+              effectively in team environments. I constantly keep up with the
+              latest industry trends and technologies to deliver high-quality,
+              impactful solutions to clients. <br />
+              <br />
+              <b>I am open to new challenges and opportunities </b>to contribute
+              to innovative web development projects.
+            </p>
+          ) : (
+            <p>
+              Olá! Eu sou Brayan Amaral, um
+              <b> Desenvolvedor Web Brasileiro de Goiânia-GO</b>, apaixonado por
+              design front-end e UI/UX, com o objetivo de me tornar um
+              desenvolvedor Full Stack excepcional. <br />
+              <br /> Com <b>22 anos e 4 anos de experiência em programação</b>
+              , estou dedicado ao crescimento profissional. <br />
+              <br />
+              Tenho comprovada habilidade para desenvolver soluções
+              personalizadas e escaláveis, seguindo as melhores práticas de
+              desenvolvimento web. Minhas excelentes habilidades de colaboração
+              e comunicação me permitem trabalhar eficazmente em ambientes de
+              equipe. Estou sempre atualizado com as últimas tendências e
+              tecnologias da indústria para oferecer soluções de alta qualidade
+              e impacto aos clientes. <br />
+              <br />
+              <b>Estou aberto a novos desafios e oportunidades </b>para
+              contribuir em projetos inovadores de desenvolvimento web.
+            </p>
+          )}
         </div>
+
         <div
           ref={skillsRef}
           className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 text-slate-400 mt-6"
         >
-          <h1 className="text-[#E2E8F0] text-3xl font-semibold tracking-tight">
+          <h1 className="text-[#E2E8F0] text-3xl font-semibold tracking-tight mb-8">
             {language == "en" ? "Skills" : "Habilidades"}
           </h1>
           {skills.map((skill) => {

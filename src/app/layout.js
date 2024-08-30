@@ -1,11 +1,5 @@
-import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export const metadata = {
   title: "Brayan Amaral - Portfolio",
@@ -16,9 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <Analytics />
-      <body
-        className={`${poppins.className} bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900`}
-      >
+      <body className="bg-slate-900 leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
         {children}
       </body>
     </html>
